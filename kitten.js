@@ -4,12 +4,12 @@ var imageAlbum = [];
 
 function makeFile(){
 
-	var counter = 0;
+	var clicker = 0;
 	
-	while (counter <= 21) {
+	while (clicker <= 21) {
 		file = 'album/cat' + Math.floor(Math.random() *21)+'.jpeg';
 		imageAlbum.push(file);
-		counter ++;
+		clicker ++;
 
 	};
 
@@ -38,14 +38,12 @@ function showImage() {
 
 		$('#leftCat').html('<img src="' + catPic1 + '">');
 		$('#rightCat').html('<img src="' + catPic2 + '">');
-		// $('#resset').on('click', function(){
-		// 	showImage();
-		// })
-
+		
 };
 
 makeFile();
 showImage();
+
 
 var catAlbum = {
 	0: 0,
@@ -69,7 +67,7 @@ var catAlbum = {
 	18: 0,
 	19: 0,
 	20: 0
-}
+};
 	var clicks=0;
 		
 		function clickMe(cat){
@@ -80,6 +78,7 @@ var catAlbum = {
 			// $('#leftButton').HTML = clicks;
 			//  console.log(clicks);
 			// $('#rightButton').HTML = clicks;
+			
 		
 		};
 	

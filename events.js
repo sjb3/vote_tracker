@@ -1,31 +1,29 @@
 
-var userInput = document.getElementById('userInput');
+//var userInput = document.getElementById('userInput');
 
 
 //reset with alert msg
-var resetButton = document.getElementById('clear').addEventListener('click', function() { 
-	alert("Sorry, please try again.");
-	}, false);
-	//event.target.cat = '';
-	//catAlbum[]= '';
 
+ $('#clear').click(function(){
+	alert('Sorry, please try again!');
+	$('#clear').empty;
+});
 
-
-var statsButton = document.getElementById('results');
-	userInput.addEventListener('results',function(event){
+// var statsButton = document.getElementById('results');
+// 	userInput.addEventListener('results',function(event){
 	//event.preventDefault();
 
 
 //catAlbum =[cat];
 
-//})
+//});
 ///////////Cat Charts/////////////////////////////
 // var data = {
 //     labels: ["cat0", "cat1", "cat2", "cat3", "cat4",'cat5','cat6','cat7','cat8','cat9','cat10','cat11','cat12','cat13','cat14','cat15','cat16','cat17','cat18','cat19','cat20'],
 //     datasets: [
 //          {
-//             label: catArrays.map(function(array){
-//                 return array.place;
+//             label: catAlbum.map(function(cat){
+//                 return cat.place;
 //                 //return shop.place;
 //             }),
 //             label: "Cuttest cats in the World",
@@ -35,8 +33,8 @@ var statsButton = document.getElementById('results');
 //             highlightStroke: "rgba(220,220,220,1)",
 
             
-//             data: catArrays.map(function(array){
-//                 return array.catAlbum;
+//             data: catAlbum.map(function(cat){
+//                 return catAlbum(cat);
 //              })
 //         }
         
