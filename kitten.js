@@ -20,7 +20,7 @@ var catPic2;
 var voteKitty1;
 var voteKitty2;
 
-function showImage() {
+function showImage(){
 
 	var kitty1 = Math.floor(Math.random() *21);
 	var kitty2 = Math.floor(Math.random() *21);
@@ -43,6 +43,14 @@ function showImage() {
 
 makeFile();
 showImage();
+
+
+ // $('#leftButton').click(function(){
+ // 	$('#rightCat').empty();
+ // })
+ // $('#rightButton').click(function(){
+ // 	$('#leftCat').empty();
+ // })
 
 
 var catAlbum = {
@@ -68,22 +76,56 @@ var catAlbum = {
 	19: 0,
 	20: 0
 };
-	var clicks=0;
+
+
+var clicks=0;
 		
-		function clickMe(cat){
-			console.log(cat);
-			catAlbum[cat] += 1;
-			console.log(catAlbum[cat]);
-			//catAlbum[cat] +=1;
-			// $('#leftButton').HTML = clicks;
-			//  console.log(clicks);
-			// $('#rightButton').HTML = clicks;
+	function clickMe(cat){
+		console.log(cat);
+		catAlbum[cat] += 1;
+		console.log(catAlbum[cat]);
+	 	//catAlbum[cat] +=1;
 			
 		
 		};
 	
-	//clickMe();
+	clickMe();
+//Array-fy
+$('#results').click(function(){
 
+var catArray = $.map(catAlbum, function(i,n){
+	return [i];
+	
+});
+
+console.log(catArray);
+
+//Find the Largest Num
+
+//var catArray[];
+var largest= 0;
+
+for (i=0; i<=catArray.length; i++){
+
+	if (catArray[i]>largest) {
+		var largest = catArray[i];
+
+	}
+}
+
+console.log(largest);
+//find the position of the largest #(IndexOF)
+var index = catArray.indexOf(largest);
+console.log(index);
+
+// display!!!
+
+var element = document.getElementById('score')
+var elTxt = 'The Cutest Kitten is number # ' + index +'( with score of '+ largest +'!)';
+
+	element.innerHTML = elTxt;
+
+});
 
 
 

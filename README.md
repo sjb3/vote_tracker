@@ -12,3 +12,7 @@ voting works! but notsure how to store the results in array and eventually graph
 instead, simple chat box function was added to leave comments!-SOOOOO CUUUUUUTE!
 
 ONLY showing the pic that wins the vote!
+
+12/20
+
+events.js has been consolidated and deleted!
